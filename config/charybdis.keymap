@@ -87,7 +87,7 @@
         Parentheses: Parentheses {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_BRACE &kp LEFT_ARROW>;
+            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT_ARROW>;
             label = "PARENTHESES";
         };
     };
@@ -107,7 +107,7 @@
 
             sensor-bindings =
                 <&scroll_vertical_encoder>,
-                // 编码器1：上下滚动,,
+                // 编码器1：上下滚动,,,
                 <&scroll_horizontal_encoder>;
 
             // 编码器2：左右滚动
@@ -115,12 +115,12 @@
 
         layer_1 {
             bindings = <
-&kp F1          &kp F2  &kp F3  &kp F4        &kp F5     &kp F6          &kp F7     &kp F8    &kp F9      &kp F10            &kp F11  &kp F12
-&kp CAPS        &none   &none   &none         &none      &Braces         &none      &none     &kp UP      &none              &none    &none
-&kp LEFT_SHIFT  &none   &none   &none         &none      &Brackets       &none      &kp LEFT  &kp DOWN    &kp RIGHT          &none    &none
-&kp LCTRL       &none   &none   &none         &none      &Parentheses    &none      &none     &kp PERIOD  &kp RIGHT_BRACKET  &none    &kp EQUAL
-                                &kp LEFT_ALT  &kp SPACE  &to 0           &none      &none
-                                              &mkp MB1   &mkp MB2        &kp ENTER
+&kp F1          &kp F2        &kp F3          &kp F4           &kp F5           &kp F6          &kp F7     &kp F8        &kp F9        &kp F10       &kp F11  &kp F12
+&kp CAPS        &none         &kp HOME        &kp UP_ARROW     &kp END          &Braces         &none      &kp N7        &kp N8        &kp N9        &none    &none
+&kp LEFT_SHIFT  &kp KP_EQUAL  &kp LEFT_ARROW  &kp DOWN_ARROW   &kp RIGHT_ARROW  &Brackets       &none      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &none    &none
+&kp LCTRL       &kp PLUS      &kp MINUS       &kp KP_MULTIPLY  &kp SLASH        &Parentheses    &none      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none    &kp EQUAL
+                                              &none            &kp SPACE        &none           &none      &kp N0
+                                                               &mkp MB1         &mkp MB2        &kp ENTER
             >;
         };
 
