@@ -55,19 +55,7 @@
     behaviors {
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        leftClick {
-            bindings = <&mkp LCLK>;
-            key-positions = <44 43>;
-        };
-
-        rightClick {
-            bindings = <&mkp RCLK>;
-            key-positions = <45 44 43>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         Braces: brc_in {
@@ -107,7 +95,7 @@
 
             sensor-bindings =
                 <&scroll_vertical_encoder>,
-                // 编码器1：上下滚动,,,,
+                // 编码器1：上下滚动,,,,,
                 <&scroll_horizontal_encoder>;
 
             // 编码器2：左右滚动
