@@ -95,17 +95,17 @@
 
         layer_0 {
             bindings = <
-&kp ESC         &kp N1              &kp N2              &kp N3              &kp N4       &kp N5      &kp N6     &kp N7           &kp N8     &kp N9      &kp N0    &kp BSLH
-&kp TAB         &autoShift LS(Q) Q  &autoShift LS(W) W  &autoShift LS(E) E  &kp R        &kp T       &kp Y      &kp U            &kp I      &kp O       &kp P     &kp SINGLE_QUOTE
-&kp LEFT_SHIFT  &kp A               &kp S               &kp D               &kp F        &kp G       &kp H      &kp J            &kp K      &kp L       &kp SEMI  &kp BACKSPACE
-&kp LCTRL       &kp Z               &kp X               &kp C               &kp V        &kp B       &kp N      &kp M            &kp COMMA  &kp PERIOD  &kp FSLH  &kp ENTER
-                                                        &kp LWIN            &lt 1 SPACE  &kp LALT    &kp SPACE  &lt 1 RIGHT_ALT
-                                                                            &mkp MB1     &mkp MB2    &mkp MB3
+&kp ESC         &autoShift LS(N1) N1  &kp N2              &kp N3              &kp N4              &kp N5                &autoShift LS(N6) N6  &autoShift LS(N7) N7  &autoShift LS(N8) N8  &autoShift LS(N9) N9  &autoShift LS(N0) N0  &autoShift LS(BSLH) BSLH
+&kp TAB         &autoShift LS(Q) Q    &autoShift LS(W) W  &autoShift LS(E) E  &autoShift LS(R) R  &autoShift LS(T) T    &kp Y                 &kp U                 &kp I                 &kp O                 &kp P                 &autoShift LS(SINGLE_QUOTE) SINGLE_QUOTE
+&kp LEFT_SHIFT  &autoShift LS(A) A    &autoShift LS(S) S  &autoShift LS(D) D  &autoShift LS(F) F  &autoShift LS(G) G    &kp H                 &kp J                 &kp K                 &kp L                 &kp SEMI              &kp BACKSPACE
+&kp LCTRL       &kp Z                 &kp X               &kp C               &kp V               &kp B                 &kp N                 &kp M                 &kp COMMA             &kp PERIOD            &kp FSLH              &kp ENTER
+                                                          &kp LWIN            &lt 1 SPACE         &kp LALT              &kp SPACE             &lt 1 RIGHT_ALT
+                                                                              &mkp MB1            &mkp MB2              &mkp MB3
             >;
 
             sensor-bindings =
                 <&scroll_vertical_encoder>,
-                // 编码器1：上下滚动,,,,,,,,,
+                // 编码器1：上下滚动,,,,,,,,,,
                 <&scroll_horizontal_encoder>;
 
             // 编码器2：左右滚动
