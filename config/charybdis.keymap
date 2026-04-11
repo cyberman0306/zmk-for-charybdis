@@ -95,17 +95,17 @@
 
         layer_0 {
             bindings = <
-&kp ESC         &autoShift LS(N1) N1  &kp N2              &kp N3              &kp N4              &kp N5                &autoShift LS(N6) N6  &autoShift LS(N7) N7  &autoShift LS(N8) N8  &autoShift LS(N9) N9  &autoShift LS(N0) N0  &autoShift LS(BSLH) BSLH
-&kp TAB         &autoShift LS(Q) Q    &autoShift LS(W) W  &autoShift LS(E) E  &autoShift LS(R) R  &autoShift LS(T) T    &kp Y                 &kp U                 &kp I                 &kp O                 &kp P                 &autoShift LS(SINGLE_QUOTE) SINGLE_QUOTE
-&kp LEFT_SHIFT  &autoShift LS(A) A    &autoShift LS(S) S  &autoShift LS(D) D  &autoShift LS(F) F  &autoShift LS(G) G    &kp H                 &kp J                 &kp K                 &kp L                 &kp SEMI              &kp BACKSPACE
-&kp LCTRL       &kp Z                 &kp X               &kp C               &kp V               &kp B                 &kp N                 &kp M                 &kp COMMA             &kp PERIOD            &kp FSLH              &kp ENTER
-                                                          &kp LWIN            &lt 1 SPACE         &kp LALT              &kp SPACE             &lt 1 RIGHT_ALT
-                                                                              &mkp MB1            &mkp MB2              &mkp MB3
+&kp ESC         &autoShift LS(N1) N1  &autoShift LS(N2) N2  &autoShift LS(N3) N3  &autoShift LS(N4) N4  &autoShift LS(N5) N5    &autoShift LS(N6) N6  &autoShift LS(N7) N7  &autoShift LS(N8) N8        &autoShift LS(N9) N9          &autoShift LS(N0) N0      &autoShift LS(BSLH) BSLH
+&kp TAB         &autoShift LS(Q) Q    &autoShift LS(W) W    &autoShift LS(E) E    &autoShift LS(R) R    &autoShift LS(T) T      &autoShift LS(Y) Y    &autoShift LS(U) U    &autoShift LS(I) I          &autoShift LS(O) O            &autoShift LS(P) P        &autoShift LS(SINGLE_QUOTE) SINGLE_QUOTE
+&kp LEFT_SHIFT  &autoShift LS(A) A    &autoShift LS(S) S    &autoShift LS(D) D    &autoShift LS(F) F    &autoShift LS(G) G      &autoShift LS(H) H    &autoShift LS(J) J    &autoShift LS(K) K          &autoShift LS(L) L            &autoShift LS(SEMI) SEMI  &kp BACKSPACE
+&kp LALT        &autoShift LS(Z) Z    &autoShift LS(X) X    &autoShift LS(C) C    &autoShift LS(V) V    &autoShift LS(B) B      &autoShift LS(N) N    &autoShift LS(M) M    &autoShift LS(COMMA) COMMA  &autoShift LS(PERIOD) PERIOD  &autoShift LS(FSLH) FSLH  &kp ENTER
+                                                            &kp LCTRL             &kp LEFT_WIN          &lt 1 SPACE             &kp SPACE             &lt 1 RIGHT_ALT
+                                                                                  &mkp MB1              &mkp MB2                &mkp MB3
             >;
 
             sensor-bindings =
                 <&scroll_vertical_encoder>,
-                // 编码器1：上下滚动,,,,,,,,,,
+                // 编码器1：上下滚动,,,,,,,,,,,
                 <&scroll_horizontal_encoder>;
 
             // 编码器2：左右滚动
@@ -113,12 +113,12 @@
 
         layer_1 {
             bindings = <
-&autoShift GRAVE TILDE  &kp F1        &kp F2          &kp F3           &kp F4           &kp F5          &kp F6  &kp F7        &kp F8        &kp F9        &kp F10  &kp F11
-&kp CAPS                &none         &kp HOME        &kp UP_ARROW     &kp END          &Braces         &none   &kp N7        &kp N8        &kp N9        &none    &kp F12
-&kp LEFT_SHIFT          &kp KP_EQUAL  &kp LEFT_ARROW  &kp DOWN_ARROW   &kp RIGHT_ARROW  &Brackets       &none   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &none    &kp DELETE
-&kp LCTRL               &kp PLUS      &kp MINUS       &kp KP_MULTIPLY  &kp SLASH        &Parentheses    &kp N0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none    &none
-                                                      &none            &kp SPACE        &none           &none   &none
-                                                                       &mkp MB1         &mkp MB2        &none
+&autoShift LS(GRAVE) GRAVE  &kp F1        &kp F2          &kp F3           &kp F4           &kp F5          &kp F6                &kp F7                            &kp F8                            &kp F9                            &kp F10  &kp F11
+&kp CAPS                    &none         &kp HOME        &kp UP_ARROW     &kp END          &Braces         &none                 &autoShift LS(N7) N7              &autoShift LS(N8) N8              &autoShift LS(N9) N9              &none    &kp F12
+&kp LEFT_SHIFT              &kp KP_EQUAL  &kp LEFT_ARROW  &kp DOWN_ARROW   &kp RIGHT_ARROW  &Brackets       &none                 &autoShift LS(NUMBER_4) NUMBER_4  &autoShift LS(N5) N5              &autoShift LS(NUMBER_6) NUMBER_6  &none    &kp DELETE
+&trans                      &kp PLUS      &kp MINUS       &kp KP_MULTIPLY  &kp SLASH        &Parentheses    &autoShift LS(N0) N0  &autoShift LS(NUMBER_1) NUMBER_1  &autoShift LS(NUMBER_2) NUMBER_2  &autoShift LS(NUMBER_3) NUMBER_3  &none    &trans
+                                                          &trans           &trans           &trans          &trans                &trans
+                                                                           &trans           &trans          &trans
             >;
         };
 
@@ -130,32 +130,6 @@
 &none  &none       &none       &none  &none  &none    &none  &none  &none  &none  &none  &none
                                &none  &none  &none    &none  &none
                                       &none  &none    &none
-            >;
-        };
-
-        layer_3 {
-            bindings = <
-&kp ESC         &kp N1  &kp N2  &kp N3    &kp N4       &kp N5      &kp N6     &kp N7           &kp N8     &kp N9      &kp N0    &kp BSLH
-&kp TAB         &kp Q   &kp W   &kp E     &kp R        &kp T       &kp Y      &kp U            &kp I      &kp O       &kp P     &kp SINGLE_QUOTE
-&kp LEFT_SHIFT  &kp A   &kp S   &kp D     &kp F        &kp G       &kp H      &kp J            &kp K      &kp L       &kp SEMI  &kp BACKSPACE
-&kp LCTRL       &kp Z   &kp X   &kp C     &kp V        &kp B       &kp N      &kp M            &kp COMMA  &kp PERIOD  &kp FSLH  &kp ENTER
-                                &kp LWIN  &lt 1 SPACE  &kp LALT    &kp SPACE  &lt 1 RIGHT_ALT
-                                          &mkp MB1     &mkp MB2    &mkp MB3
-            >;
-
-            sensor-bindings =
-                <&scroll_vertical_encoder>,
-                <&scroll_horizontal_encoder>;
-        };
-
-        layer_4 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
-                                &trans  &trans    &trans
             >;
         };
 
