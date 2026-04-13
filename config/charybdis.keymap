@@ -114,7 +114,7 @@
 
             sensor-bindings =
                 <&scroll_vertical_encoder>,
-                // 编码器1：上下滚动,,,,,,,,,,,,,,,,,
+                // 编码器1：上下滚动,,,,,,,,,,,,,,,,,,
                 <&scroll_horizontal_encoder>;
 
             // 编码器2：左右滚动
@@ -133,12 +133,12 @@
 
         layer_2 {
             bindings = <
-&out OUT_TOG  &bt BT_NXT     &bt BT_CLR     &out OUT_BLE   &out OUT_USB   &none    &none  &none  &none  &none  &none  &none
-&none         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &none    &none  &kp Y  &none  &none  &none  &none
-&none         &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &none    &none  &none  &none  &none  &none  &none
-&none         &bl BL_ON      &bl BL_OFF     &none          &none          &none    &none  &none  &none  &none  &none  &none
-                                            &none          &none          &none    &none  &none
-                                                           &none          &none    &none
+&out OUT_TOG  &bt BT_CLR_ALL  &bt BT_CLR     &out OUT_BLE   &out OUT_USB   &none    &none  &none  &none  &none  &none  &none
+&none         &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &none    &none  &kp Y  &none  &none  &none  &none
+&none         &bt BT_DISC 0   &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &none    &none  &none  &none  &none  &none  &none
+&none         &bl BL_ON       &bl BL_OFF     &none          &none          &none    &none  &none  &none  &none  &none  &none
+                                             &none          &none          &none    &none  &none
+                                                            &none          &none    &none
             >;
         };
 
