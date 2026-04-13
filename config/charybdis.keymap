@@ -67,7 +67,14 @@
     behaviors {
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        mb3 {
+            bindings = <&mkp MB3>;
+            key-positions = <54 53>;
+        };
+    };
 
     macros {
         Braces: brc_in {
@@ -101,13 +108,13 @@
 &kp TAB         &autoShift LS(Q) Q    &autoShift LS(W) W    &autoShift LS(E) E    &autoShift LS(R) R    &autoShift LS(T) T      &autoShift LS(Y) Y    &autoShift LS(U) U    &autoShift LS(I) I          &autoShift LS(O) O            &autoShift LS(SEMICOLON) SEMICOLON  &autoShift LS(SINGLE_QUOTE) SINGLE_QUOTE
 &kp LEFT_ALT    &autoShift LS(A) A    &autoShift LS(S) S    &autoShift LS(D) D    &autoShift LS(F) F    &autoShift LS(G) G      &autoShift LS(H) H    &autoShift LS(J) J    &autoShift LS(K) K          &autoShift LS(L) L            &autoShift LS(P) P                  &kp BACKSPACE
 &kp LEFT_SHIFT  &autoShift LS(Z) Z    &autoShift LS(X) X    &autoShift LS(C) C    &autoShift LS(V) V    &autoShift LS(B) B      &autoShift LS(N) N    &autoShift LS(M) M    &autoShift LS(COMMA) COMMA  &autoShift LS(PERIOD) PERIOD  &autoShift LS(FSLH) FSLH            &kp ENTER
-                                                            &kp LCTRL             &lt 1 SPACE           &kp LEFT_WIN            &kp SPACE             &lt 1 RIGHT_ALT
-                                                                                  &mkp MB1              &mkp MB2                &mkp MB3
+                                                            &kp LCTRL             &lt 1 SPACE           &kp LEFT_WIN            &kp PG_UP             &lt 1 RIGHT_ALT
+                                                                                  &mkp MB1              &mkp MB2                &kp PG_DN
             >;
 
             sensor-bindings =
                 <&scroll_vertical_encoder>,
-                // 编码器1：上下滚动,,,,,,,,,,,,,,,,
+                // 编码器1：上下滚动,,,,,,,,,,,,,,,,,
                 <&scroll_horizontal_encoder>;
 
             // 编码器2：左右滚动
@@ -115,23 +122,23 @@
 
         layer_1 {
             bindings = <
-&autoShift LS(GRAVE) GRAVE  &kp F1        &kp F2          &kp F3           &kp F4           &kp F5          &kp F6                &kp F7                            &kp F8                            &kp F9                            &kp F10  &kp F11
-&kp CAPS                    &none         &kp HOME        &kp UP_ARROW     &kp END          &Braces         &none                 &autoShift LS(N7) N7              &autoShift LS(N8) N8              &autoShift LS(N9) N9              &none    &kp F12
-&trans                      &kp KP_EQUAL  &kp LEFT_ARROW  &kp DOWN_ARROW   &kp RIGHT_ARROW  &Brackets       &none                 &autoShift LS(NUMBER_4) NUMBER_4  &autoShift LS(N5) N5              &autoShift LS(NUMBER_6) NUMBER_6  &none    &kp DELETE
-&trans                      &kp PLUS      &kp MINUS       &kp KP_MULTIPLY  &kp SLASH        &Parentheses    &autoShift LS(N0) N0  &autoShift LS(NUMBER_1) NUMBER_1  &autoShift LS(NUMBER_2) NUMBER_2  &autoShift LS(NUMBER_3) NUMBER_3  &none    &trans
-                                                          &trans           &mo 2            &trans          &mo 2                 &trans
-                                                                           &trans           &trans          &trans
+&autoShift LS(GRAVE) GRAVE  &kp F1                 &kp F2                  &kp F3           &kp F4           &kp F5          &kp F6                &kp F7                            &kp F8                            &kp F9                            &kp F10  &kp F11
+&kp CAPS                    &none                  &kp HOME                &kp UP_ARROW     &kp END          &Braces         &none                 &autoShift LS(N7) N7              &autoShift LS(N8) N8              &autoShift LS(N9) N9              &none    &kp F12
+&trans                      &kp EQUAL              &kp LEFT_ARROW          &kp DOWN_ARROW   &kp RIGHT_ARROW  &Brackets       &none                 &autoShift LS(NUMBER_4) NUMBER_4  &autoShift LS(N5) N5              &autoShift LS(NUMBER_6) NUMBER_6  &none    &kp DELETE
+&trans                      &autoShift EQUAL PLUS  &autoShift UNDER MINUS  &kp KP_MULTIPLY  &kp SLASH        &Parentheses    &autoShift LS(N0) N0  &autoShift LS(NUMBER_1) NUMBER_1  &autoShift LS(NUMBER_2) NUMBER_2  &autoShift LS(NUMBER_3) NUMBER_3  &none    &trans
+                                                                           &trans           &mo 2            &trans          &mo 2                 &trans
+                                                                                            &trans           &trans          &trans
             >;
         };
 
         layer_2 {
             bindings = <
-&none  &bt BT_NXT     &bt BT_CLR     &out OUT_BLE   &out OUT_USB   &none    &none  &none  &none  &none  &none  &none
-&none  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &none    &none  &none  &none  &none  &none  &none
-&none  &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &none    &none  &none  &none  &none  &none  &none
-&none  &bl BL_ON      &bl BL_OFF     &none          &none          &none    &none  &none  &none  &none  &none  &none
-                                     &none          &none          &none    &none  &none
-                                                    &none          &none    &none
+&out OUT_TOG  &bt BT_NXT     &bt BT_CLR     &out OUT_BLE   &out OUT_USB   &none    &none  &none  &none  &none  &none  &none
+&none         &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &none    &none  &kp Y  &none  &none  &none  &none
+&none         &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &none    &none  &none  &none  &none  &none  &none
+&none         &bl BL_ON      &bl BL_OFF     &none          &none          &none    &none  &none  &none  &none  &none  &none
+                                            &none          &none          &none    &none  &none
+                                                           &none          &none    &none
             >;
         };
 
