@@ -130,8 +130,7 @@
                                                                &trans           &mo 2            &trans          &trans                &mo 2
                                                                                 &trans           &trans          &trans
             >;
-
-            trackball-bindings = <&tsl>;
+ 
         };
 
         layer_2 {
@@ -143,8 +142,7 @@
                                              &none          &none          &none    &none  &none
                                                             &none          &none    &none
             >;
-
-            trackball-bindings = <&tsl>;
+ 
         };
 
         layer1autoshiftOFF {
