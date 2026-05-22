@@ -115,7 +115,7 @@
 
             sensor-bindings =
                 <&scroll_vertical_encoder>,
-                // 编码器1：上下滚动,,,,,,,,,,,,,,,,,,,,,,,,,
+                // 编码器1：上下滚动,,,,,,,,,,,,,,,,,,,,,,,,,,
                 <&scroll_horizontal_encoder>;
 
             // 编码器2：左右滚动
@@ -130,7 +130,6 @@
                                                                &trans           &mo 2            &trans          &trans                &mo 2
                                                                                 &trans           &trans          &trans
             >;
- 
         };
 
         layer_2 {
@@ -142,7 +141,6 @@
                                              &none          &none          &none    &none  &none
                                                             &none          &none    &none
             >;
- 
         };
 
         layer1autoshiftOFF {
@@ -153,6 +151,17 @@
 &kp LSHFT  &kp Z   &kp X   &kp C      &kp V        &kp B       &kp N          &kp M       &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
                            &kp LCTRL  &lt 1 SPACE  &kp LGUI    &kp PAGE_UP    &lt 1 RALT
                                       &mkp MB1     &mkp MB2    &kp PAGE_DOWN
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans
+                                &trans  &trans    &trans
             >;
         };
 
