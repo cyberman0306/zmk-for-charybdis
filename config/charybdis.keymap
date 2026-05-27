@@ -107,15 +107,15 @@
             bindings = <
 &kp ESC         &autoShift LS(N1) N1  &autoShift LS(N2) N2  &autoShift LS(N3) N3  &autoShift LS(N4) N4  &autoShift LS(N5) N5    &autoShift LS(N6) N6  &autoShift LS(N7) N7  &autoShift LS(N8) N8        &autoShift LS(N9) N9          &autoShift LS(N0) N0                &autoShift LS(BSLH) BSLH
 &kp TAB         &autoShift LS(Q) Q    &autoShift LS(W) W    &autoShift LS(E) E    &autoShift LS(R) R    &autoShift LS(T) T      &autoShift LS(Y) Y    &autoShift LS(U) U    &autoShift LS(I) I          &autoShift LS(O) O            &autoShift LS(SEMICOLON) SEMICOLON  &autoShift LS(SINGLE_QUOTE) SINGLE_QUOTE
-&kp LEFT_ALT    &autoShift LS(A) A    &autoShift LS(S) S    &autoShift LS(D) D    &autoShift LS(F) F    &autoShift LS(G) G      &autoShift LS(H) H    &autoShift LS(J) J    &autoShift LS(K) K          &autoShift LS(L) L            &autoShift LS(P) P                  &kp BACKSPACE
-&kp LEFT_SHIFT  &autoShift LS(Z) Z    &autoShift LS(X) X    &autoShift LS(C) C    &autoShift LS(V) V    &autoShift LS(B) B      &autoShift LS(N) N    &autoShift LS(M) M    &autoShift LS(COMMA) COMMA  &autoShift LS(PERIOD) PERIOD  &autoShift LS(FSLH) FSLH            &kp ENTER
-                                                            &kp LCTRL             &lt 1 SPACE           &kp LEFT_WIN            &kp PG_UP             &lt 1 RIGHT_ALT
+&sk LEFT_ALT    &autoShift LS(A) A    &autoShift LS(S) S    &autoShift LS(D) D    &autoShift LS(F) F    &autoShift LS(G) G      &autoShift LS(H) H    &autoShift LS(J) J    &autoShift LS(K) K          &autoShift LS(L) L            &autoShift LS(P) P                  &kp BACKSPACE
+&sk LEFT_SHIFT  &autoShift LS(Z) Z    &autoShift LS(X) X    &autoShift LS(C) C    &autoShift LS(V) V    &autoShift LS(B) B      &autoShift LS(N) N    &autoShift LS(M) M    &autoShift LS(COMMA) COMMA  &autoShift LS(PERIOD) PERIOD  &autoShift LS(FSLH) FSLH            &kp ENTER
+                                                            &sk LCTRL             &lt 1 SPACE           &kp LEFT_WIN            &kp PG_UP             &lt 1 RIGHT_ALT
                                                                                   &mkp MB1              &mkp MB2                &kp PG_DN
             >;
 
             sensor-bindings =
                 <&scroll_vertical_encoder>,
-                // 编码器1：上下滚动,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+                // 编码器1：上下滚动,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
                 <&scroll_horizontal_encoder>;
 
             // 编码器2：左右滚动
